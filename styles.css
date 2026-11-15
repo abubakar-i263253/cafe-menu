@@ -1,0 +1,55 @@
+/* Muhammad Abubakar
+      26i-3253
+      Section: E */
+
+body {
+  background-color: mediumaquamarine;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+
+.table1 {
+  border-collapse: collapse;
+}
+
+.table1 th {
+  padding: 10px 30px;
+  border: 1px solid;
+}
+
+.table1 td {
+  border: 1px solid;
+  padding: 10px 30px;
+}
+
+.table2 {
+  border-collapse: collapse;
+}
+
+.table2 th {
+  padding: 10px 30px;
+  border: 1px solid;
+}
+
+.table2 td {
+  border: 1px solid;
+  padding: 10px 30px;
+}
+
+.image {
+  width: 200px;
+  float: right;
+}
