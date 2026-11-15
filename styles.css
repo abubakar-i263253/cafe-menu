@@ -185,3 +185,14 @@ h3 { font-size: 18px; margin-bottom: 4px; }
   .page-navigation { flex-direction: column; }
   .page-navigation .button-link { width: 100%; max-width: 280px; }
 }
+
+
+/* Gallery page: Back to Top link */
+.back-to-top-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 24px auto 0;
+}
+.back-to-top {
+  text-align: center;
+}

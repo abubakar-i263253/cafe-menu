@@ -16,4 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
       message.textContent = "Thanks for your interest! Please visit one of our branches or contact us for ordering details.";
     });
   }
+
+
+  // Smoothly return to the top when the Gallery page's Back to Top link is clicked.
+  var backToTopLink = document.querySelector("[data-scroll-top]");
+  if (backToTopLink) {
+    backToTopLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 });
