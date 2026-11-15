@@ -1,12 +1,14 @@
 /* Muhammad Abubakar
-      26i-3253
-      Section: E */
+   26i-3253
+   Section: E */
 
 body {
   background-color: mediumaquamarine;
   color: white;
   font-family: Arial, sans-serif;
   font-size: 16px;
+  margin: 0;
+  padding: 0 20px 30px;
 }
 
 h1 {
@@ -20,36 +22,127 @@ h2 {
   font-size: 24px;
 }
 
-
-.table1 {
-  border-collapse: collapse;
+/* Shared navigation for all pages */
+.navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 -20px 28px;
+  padding: 14px 20px;
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
-.table1 th {
-  padding: 10px 30px;
-  border: 1px solid;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 9px 16px;
+  border-radius: 5px;
 }
 
-.table1 td {
-  border: 1px solid;
-  padding: 10px 30px;
+.navbar a:hover,
+.navbar a.active {
+  background-color: rgba(255, 255, 255, 0.22);
 }
 
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro,
+.order-note {
+  text-align: center;
+  line-height: 1.6;
+}
+
+.menu-section {
+  margin: 28px 0;
+}
+
+.table1,
 .table2 {
   border-collapse: collapse;
+  min-width: 280px;
 }
 
+.table1 th,
 .table2 th {
   padding: 10px 30px;
-  border: 1px solid;
+  border: 1px solid white;
+  text-align: left;
 }
 
+.table1 td,
 .table2 td {
-  border: 1px solid;
+  border: 1px solid white;
   padding: 10px 30px;
 }
 
 .image {
   width: 200px;
+  max-width: 40%;
   float: right;
+  margin: 10px 0 20px 25px;
+  border-radius: 5px;
+}
+
+.order-note {
+  clear: both;
+  margin-top: 35px;
+}
+
+.order-button {
+  display: block;
+  width: fit-content;
+  margin: 12px auto;
+  padding: 10px 22px;
+  color: mediumaquamarine;
+  background-color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.order-button:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .navbar {
+    margin-right: -14px;
+    margin-left: -14px;
+    gap: 2px;
+  }
+
+  .navbar a {
+    padding: 8px 10px;
+  }
+
+  .image {
+    float: none;
+    display: block;
+    max-width: 100%;
+    width: 200px;
+    margin: 15px auto;
+  }
+
+  .table1,
+  .table2 {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .table1 th,
+  .table2 th,
+  .table1 td,
+  .table2 td {
+    padding: 9px 12px;
+  }
 }
