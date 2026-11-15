@@ -1,11 +1,11 @@
-<!-- Muhammad Abubakar | 26i-3253 | Section E -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <title>Gallery | Cafe Corner</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <nav class="navbar" aria-label="Main navigation">
@@ -14,9 +14,42 @@
     <a href="gallery.html" class="active" aria-current="page">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
+
   <main class="page-content">
-    <h1>Our Gallery</h1>
-    <p class="intro">Our cafe gallery will be added here.</p>
+    <header class="page-heading">
+      <p class="eyebrow">A GLIMPSE INSIDE</p>
+      <h1>Our Gallery</h1>
+      <p class="intro">A few snapshots of the coffee, food, and cozy corners that make cafe time special.</p>
+    </header>
+
+    <section class="gallery-grid" aria-label="Cafe photo gallery">
+      <figure class="gallery-item gallery-large">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85" alt="Coffee being prepared">
+        <figcaption>Freshly brewed coffee</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=85" alt="Bright cafe seating area">
+        <figcaption>Our cozy space</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=85" alt="Cafe tables and warm interior">
+        <figcaption>Relax and unwind</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85" alt="Burger with fresh ingredients">
+        <figcaption>Made to satisfy</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=85" alt="Cold creamy milkshake">
+        <figcaption>Something refreshing</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85" alt="Restaurant dining area">
+        <figcaption>Good times together</figcaption>
+      </figure>
+    </section>
+    <p class="small-note gallery-note">Gallery photos are loaded from Unsplash and require an internet connection.</p>
   </main>
+  <footer class="site-footer">Cafe Corner · Good food, good mood.</footer>
 </body>
 </html>

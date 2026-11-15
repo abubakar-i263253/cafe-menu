@@ -1,13 +1,11 @@
-<!-- Muhammad Abubakar
-     26i-3253
-     Section: E -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafe Menu</title>
+  <title>Our Menu | Cafe Corner</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <nav class="navbar" aria-label="Main navigation">
@@ -18,57 +16,61 @@
   </nav>
 
   <main class="page-content">
-    <h1>Our Menu</h1>
-    <p class="intro">Freshly prepared favourites, delicious drinks, and something for every craving.</p>
+    <header class="page-heading">
+      <p class="eyebrow">MADE FRESH FOR YOU</p>
+      <h1>Our Menu</h1>
+      <p class="intro">Take your pick from comforting classics, satisfying bites, and refreshing drinks.</p>
+    </header>
 
-    <img class="image" src="https://uploads.onecompiler.io/458cke32p/1793948122004/images.jpg" alt="A cup of coffee">
+    <div class="menu-grid">
+      <section class="menu-card">
+        <h2>Burgers &amp; Sandwiches</h2>
+        <p class="section-note">Served fresh and full of flavour.</p>
+        <div class="menu-item"><div><h3>Zinger Burger</h3><p>Crispy chicken, fresh lettuce, and house sauce.</p></div><strong>Rs. 500</strong></div>
+        <div class="menu-item"><div><h3>Patty Burger</h3><p>Classic grilled patty with fresh toppings.</p></div><strong>Rs. 300</strong></div>
+        <div class="menu-item"><div><h3>Chicken Cheese Burger</h3><p>Chicken patty with melted cheese.</p></div><strong>Rs. 550</strong></div>
+        <div class="menu-item"><div><h3>Beef Burger</h3><p>Juicy beef patty with our signature dressing.</p></div><strong>Rs. 600</strong></div>
+        <div class="menu-item"><div><h3>Club Sandwich</h3><p>Toasted layers of chicken, egg, and vegetables.</p></div><strong>Rs. 450</strong></div>
+      </section>
 
-    <section class="menu-section">
-      <h2>Burgers</h2>
-      <table class="table1">
-        <tr><th>Item name</th><th>Price</th></tr>
-        <tr><td>Zinger Burger</td><td>Rs. 500</td></tr>
-        <tr><td>Patty Burger</td><td>Rs. 300</td></tr>
-        <tr><td>Chicken Cheese Burger</td><td>Rs. 550</td></tr>
-        <tr><td>Beef Burger</td><td>Rs. 600</td></tr>
-      </table>
+      <section class="menu-card">
+        <h2>Sides &amp; Snacks</h2>
+        <p class="section-note">Perfect for sharing—or not!</p>
+        <div class="menu-item"><div><h3>French Fries</h3><p>Golden, crispy, and lightly salted.</p></div><strong>Rs. 200</strong></div>
+        <div class="menu-item"><div><h3>Loaded Fries</h3><p>Fries topped with cheese sauce and seasoning.</p></div><strong>Rs. 320</strong></div>
+        <div class="menu-item"><div><h3>Chicken Nuggets</h3><p>Six crispy bites served with dip.</p></div><strong>Rs. 350</strong></div>
+        <div class="menu-item"><div><h3>Chicken Wrap</h3><p>Grilled chicken and crunchy vegetables in a wrap.</p></div><strong>Rs. 400</strong></div>
+        <div class="menu-item"><div><h3>Garlic Bread</h3><p>Toasted bread with buttery garlic flavour.</p></div><strong>Rs. 220</strong></div>
+      </section>
+
+      <section class="menu-card">
+        <h2>Hot Drinks</h2>
+        <p class="section-note">A warm cup for any time of day.</p>
+        <div class="menu-item"><div><h3>Regular Coffee</h3><p>Freshly brewed classic coffee.</p></div><strong>Rs. 250</strong></div>
+        <div class="menu-item"><div><h3>Cappuccino</h3><p>Espresso with steamed milk and foam.</p></div><strong>Rs. 350</strong></div>
+        <div class="menu-item"><div><h3>Café Latte</h3><p>Smooth espresso with creamy milk.</p></div><strong>Rs. 350</strong></div>
+        <div class="menu-item"><div><h3>Tea</h3><p>Traditional milk tea.</p></div><strong>Rs. 150</strong></div>
+        <div class="menu-item"><div><h3>Hot Chocolate</h3><p>Rich chocolate blended with warm milk.</p></div><strong>Rs. 300</strong></div>
+      </section>
+
+      <section class="menu-card">
+        <h2>Cold Drinks</h2>
+        <p class="section-note">Cool, refreshing favourites.</p>
+        <div class="menu-item"><div><h3>Pepsi</h3><p>Chilled soft drink.</p></div><strong>Rs. 100</strong></div>
+        <div class="menu-item"><div><h3>Coke</h3><p>Chilled soft drink.</p></div><strong>Rs. 100</strong></div>
+        <div class="menu-item"><div><h3>Fresh Lime</h3><p>A refreshing sweet and tangy cooler.</p></div><strong>Rs. 180</strong></div>
+        <div class="menu-item"><div><h3>Chocolate Milkshake</h3><p>Thick milkshake blended with chocolate.</p></div><strong>Rs. 300</strong></div>
+        <div class="menu-item"><div><h3>Mango Smoothie</h3><p>Seasonal mango blended until smooth.</p></div><strong>Rs. 320</strong></div>
+      </section>
+    </div>
+
+    <section class="order-panel">
+      <h2>Ready to Order?</h2>
+      <p>Visit your nearest branch or get in touch with us for ordering information.</p>
+      <button class="button-link" type="button" data-action="order">Order Now</button>
+      <p class="small-note" id="order-message" aria-live="polite"></p>
     </section>
-
-    <section class="menu-section">
-      <h2>Sides &amp; Snacks</h2>
-      <table class="table2">
-        <tr><th>Item name</th><th>Price</th></tr>
-        <tr><td>French Fries</td><td>Rs. 200</td></tr>
-        <tr><td>Chicken Nuggets</td><td>Rs. 350</td></tr>
-        <tr><td>Club Sandwich</td><td>Rs. 450</td></tr>
-        <tr><td>Chicken Wrap</td><td>Rs. 400</td></tr>
-      </table>
-    </section>
-
-    <section class="menu-section">
-      <h2>Hot Drinks</h2>
-      <table class="table1">
-        <tr><th>Item name</th><th>Price</th></tr>
-        <tr><td>Hot Coffee</td><td>Rs. 250</td></tr>
-        <tr><td>Cappuccino</td><td>Rs. 350</td></tr>
-        <tr><td>Tea</td><td>Rs. 150</td></tr>
-        <tr><td>Hot Chocolate</td><td>Rs. 300</td></tr>
-      </table>
-    </section>
-
-    <section class="menu-section">
-      <h2>Cold Drinks</h2>
-      <table class="table2">
-        <tr><th>Item name</th><th>Price</th></tr>
-        <tr><td>Pepsi</td><td>Rs. 100</td></tr>
-        <tr><td>Coke</td><td>Rs. 100</td></tr>
-        <tr><td>Fresh Lime</td><td>Rs. 180</td></tr>
-        <tr><td>Chocolate Milkshake</td><td>Rs. 300</td></tr>
-      </table>
-    </section>
-
-    <p class="order-note">Want to try something? Visit us and place your order!</p>
-    <a class="order-button" href="contact.html">Order now</a>
   </main>
+  <footer class="site-footer">Cafe Corner · Good food, good mood.</footer>
 </body>
 </html>

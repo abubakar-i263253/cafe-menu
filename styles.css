@@ -1,148 +1,162 @@
-/* Muhammad Abubakar
-   26i-3253
-   Section: E */
+/* Muhammad Abubakar | 26i-3253 | Section E
+   Cafe Corner - shared stylesheet for all four pages */
+
+:root {
+  --cafe-green: mediumaquamarine;
+  --deep-green: #26785f;
+  --soft-green: rgba(0, 0, 0, 0.12);
+  --white: #ffffff;
+  --text-dark: #244b40;
+}
+
+* { box-sizing: border-box; }
 
 body {
-  background-color: mediumaquamarine;
-  color: white;
+  background-color: var(--cafe-green);
+  color: var(--white);
   font-family: Arial, sans-serif;
   font-size: 16px;
+  line-height: 1.6;
   margin: 0;
   padding: 0 20px 30px;
 }
 
-h1 {
-  text-align: center;
+h1, h2, h3 {
   font-family: Georgia, serif;
-  font-size: 32px;
+  line-height: 1.25;
+  margin-top: 0;
 }
 
-h2 {
-  font-family: Georgia, serif;
-  font-size: 24px;
-}
+h1 { text-align: center; font-size: 36px; margin-bottom: 12px; }
+h2 { font-size: 25px; }
+h3 { font-size: 18px; margin-bottom: 4px; }
 
-/* Shared navigation for all pages */
 .navbar {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 0 -20px 28px;
+  margin: 0 -20px 32px;
   padding: 14px 20px;
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: var(--soft-green);
 }
 
 .navbar a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
   padding: 9px 16px;
   border-radius: 5px;
+  transition: background-color 0.2s ease;
 }
 
 .navbar a:hover,
-.navbar a.active {
-  background-color: rgba(255, 255, 255, 0.22);
-}
+.navbar a.active { background-color: rgba(255, 255, 255, 0.23); }
 
-.page-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
+.page-content { max-width: 1040px; margin: 0 auto; }
+.page-heading { text-align: center; margin: 0 auto 34px; max-width: 720px; }
+.page-heading h1 { margin-bottom: 10px; }
+.eyebrow { text-align: center; letter-spacing: 2px; font-size: 12px; font-weight: bold; margin: 0 0 10px; }
+.intro { text-align: center; line-height: 1.7; margin: 0 auto; max-width: 700px; }
 
-.intro,
-.order-note {
-  text-align: center;
-  line-height: 1.6;
+/* Home / welcome page */
+.welcome-hero {
+  max-width: 1100px;
+  margin: 25px auto 55px;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 42px;
+  align-items: center;
 }
-
-.menu-section {
-  margin: 28px 0;
-}
-
-.table1,
-.table2 {
-  border-collapse: collapse;
-  min-width: 280px;
-}
-
-.table1 th,
-.table2 th {
-  padding: 10px 30px;
-  border: 1px solid white;
-  text-align: left;
-}
-
-.table1 td,
-.table2 td {
-  border: 1px solid white;
-  padding: 10px 30px;
-}
-
-.image {
-  width: 200px;
-  max-width: 40%;
-  float: right;
-  margin: 10px 0 20px 25px;
-  border-radius: 5px;
-}
-
-.order-note {
-  clear: both;
-  margin-top: 35px;
-}
-
-.order-button {
-  display: block;
+.welcome-copy h1 { text-align: left; font-size: clamp(38px, 5vw, 56px); margin-bottom: 18px; }
+.welcome-copy .eyebrow { text-align: left; }
+.lead { font-size: 18px; line-height: 1.8; margin: 0 0 25px; }
+.hero-image { display: block; width: 100%; height: 390px; object-fit: cover; border-radius: 12px; box-shadow: 0 12px 28px rgba(0,0,0,0.14); }
+.button-link {
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
   width: fit-content;
-  margin: 12px auto;
-  padding: 10px 22px;
-  color: mediumaquamarine;
-  background-color: white;
-  border-radius: 5px;
+  padding: 12px 23px;
+  color: var(--deep-green);
+  background-color: var(--white);
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  font: bold 15px Arial, sans-serif;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
+.button-link:hover { background-color: #f1fff9; transform: translateY(-2px); }
+.welcome-details { max-width: 1000px; margin: 0 auto; text-align: center; }
+.welcome-details > p { max-width: 760px; margin: 0 auto; }
+.welcome-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 30px; }
+.highlight { padding: 22px 18px; border: 1px solid rgba(255,255,255,0.55); border-radius: 10px; background: rgba(255,255,255,0.08); }
+.highlight h3 { margin: 8px 0; }
+.highlight p { margin: 0; }
+.highlight-icon { font-size: 27px; }
 
-.order-button:hover {
-  background-color: #f0f0f0;
+/* Menu page */
+.menu-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.menu-card {
+  padding: 24px 25px;
+  border: 1px solid rgba(255,255,255,0.58);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.09);
 }
+.menu-card h2 { margin-bottom: 4px; }
+.section-note { margin: 0 0 14px; opacity: 0.9; font-size: 14px; }
+.menu-item { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 12px 0; border-top: 1px solid rgba(255,255,255,0.35); }
+.menu-item h3 { margin: 0 0 3px; font-size: 17px; }
+.menu-item p { margin: 0; font-size: 13px; line-height: 1.45; opacity: 0.92; }
+.menu-item strong { white-space: nowrap; padding-top: 2px; }
+.order-panel { text-align: center; margin: 32px auto 10px; padding: 25px; border: 1px solid rgba(255,255,255,0.55); border-radius: 10px; background: rgba(0,0,0,0.08); }
+.order-panel h2 { margin-bottom: 8px; }
+.order-panel p { margin: 5px 0 14px; }
+.order-panel .button-link { margin-top: 5px; }
+.small-note { font-size: 13px; opacity: 0.9; }
 
-@media (max-width: 600px) {
-  body {
-    padding-right: 14px;
-    padding-left: 14px;
-  }
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.gallery-item { position: relative; margin: 0; overflow: hidden; border-radius: 10px; min-height: 220px; background: rgba(0,0,0,0.08); }
+.gallery-item img { display: block; width: 100%; height: 100%; min-height: 220px; object-fit: cover; transition: transform 0.3s ease; }
+.gallery-item:hover img { transform: scale(1.04); }
+.gallery-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 14px 12px; background: linear-gradient(transparent, rgba(0,0,0,0.68)); font-weight: bold; }
+.gallery-large { grid-column: span 2; }
+.gallery-large img { min-height: 300px; }
+.gallery-note { text-align: center; margin-top: 18px; }
 
-  .navbar {
-    margin-right: -14px;
-    margin-left: -14px;
-    gap: 2px;
-  }
+/* Contact */
+.branch-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.branch-card { position: relative; padding: 25px 21px; border: 1px solid rgba(255,255,255,0.58); border-radius: 10px; background: rgba(255,255,255,0.09); }
+.branch-number { display: inline-block; font-family: Georgia, serif; font-size: 14px; letter-spacing: 2px; opacity: 0.8; margin-bottom: 12px; }
+.branch-card h2 { font-size: 22px; margin-bottom: 5px; }
+.branch-card p { margin: 9px 0; }
+.branch-area { font-weight: bold; }
+.contact-strip { margin: 28px auto 0; padding: 23px; text-align: center; border-radius: 10px; background: rgba(0,0,0,0.08); }
+.contact-strip h2 { margin-bottom: 8px; }
+.contact-strip p { margin: 5px 0; }
 
-  .navbar a {
-    padding: 8px 10px;
-  }
+.site-footer { max-width: 1040px; margin: 55px auto 0; padding-top: 18px; text-align: center; border-top: 1px solid rgba(255,255,255,0.4); font-size: 13px; }
 
-  .image {
-    float: none;
-    display: block;
-    max-width: 100%;
-    width: 200px;
-    margin: 15px auto;
-  }
-
-  .table1,
-  .table2 {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .table1 th,
-  .table2 th,
-  .table1 td,
-  .table2 td {
-    padding: 9px 12px;
-  }
+@media (max-width: 760px) {
+  .welcome-hero { grid-template-columns: 1fr; gap: 24px; margin-top: 10px; }
+  .welcome-copy h1 { text-align: center; }
+  .welcome-copy .eyebrow { text-align: center; }
+  .welcome-copy { text-align: center; }
+  .hero-image { height: 280px; }
+  .welcome-highlights { grid-template-columns: 1fr; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .branch-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery-large { grid-column: span 2; }
+}
+@media (max-width: 520px) {
+  body { padding-right: 14px; padding-left: 14px; }
+  .navbar { margin-right: -14px; margin-left: -14px; gap: 2px; }
+  .navbar a { padding: 8px 10px; }
+  h1 { font-size: 31px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-large { grid-column: span 1; }
+  .gallery-large img, .gallery-item img { min-height: 220px; }
+  .menu-card { padding: 20px 17px; }
+  .menu-item { gap: 10px; }
 }
